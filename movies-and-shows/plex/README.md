@@ -29,4 +29,4 @@ apt-get update; apt-get dist-upgrade -y; apt-get install sudo curl git micro
 adduser lupus; usermod -aG sudo lupus; exit
 ```
 
-Log in back as the newly created user to continue the operations&#x20;
+Log in back as the newly created user to continue the operations.
