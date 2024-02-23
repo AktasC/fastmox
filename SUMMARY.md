@@ -3,19 +3,19 @@
 * [🏠 Home](README.md)
 * [🛠️ Hardware & Software](hardware-and-software.md)
 
-## Group 1
+## 🥇 Base Install
 
-* [🪱 Debian](group-1/debian/README.md)
-  * [PCI Passthrough](group-1/debian/pci-passthrough.md)
+* [🪱 Debian](base-install/debian/README.md)
+  * [PCI Passthrough](base-install/debian/pci-passthrough.md)
 
-## Group 2
+## 🍿 Movies & Shows
 
-* [🎥 Plex](group-2/plex/README.md)
-  * [Zurg](group-2/plex/zurg.md)
-  * [RClone](group-2/plex/rclone.md)
+* [🎥 Plex](movies-and-shows/plex/README.md)
+  * [Zurg](movies-and-shows/plex/zurg.md)
+  * [RClone](movies-and-shows/plex/rclone.md)
 
-## Group 3
+## 🧪 Laboratory
 
-* [🌌 Cosmos](group-3/cosmos/README.md)
-  * [SSL & CloudFlare](group-3/cosmos/ssl-and-cloudflare.md)
-* [🎮 Pterodactyl](group-3/pterodactyl.md)
+* [🌌 Cosmos](laboratory/cosmos/README.md)
+  * [SSL & CloudFlare](laboratory/cosmos/ssl-and-cloudflare.md)
+* [🎮 Pterodactyl](laboratory/pterodactyl.md)
