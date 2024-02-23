@@ -9,7 +9,7 @@
 5. `mv releases/v0.9.3-hotfix.6/zurg-v0.9.3-hotfix.6-darwin-amd64.zip zurg.zip unzip ./zurg.zip`
 6. `sudo chmod +x ./zurg`
 
-## Edit config.yml
+## Edit config.yaml
 
 ```yaml
 zurg: v1
@@ -19,50 +19,45 @@ token: YOURTOKEN
 # username:
 # password:
 # proxy:
+
 # concurrent_workers: 20
 check_for_changes_every_secs: 30
-# repair_every_mins: 60
-# ignore_renames: false
-# retain_rd_torrent_name: false
-# retain_folder_name_extension: false
+retain_rd_torrent_name: false
+retain_folder_name_extension: false
+expose_full_path: true
 enable_repair: true
 auto_delete_rar_torrents: true
-# api_timeout_secs: 15
-# download_timeout_secs: 10
-# enable_download_mount: false
-# rate_limit_sleep_secs: 6
-# retries_until_failed: 2
-# network_buffer_size: 4194304 # 4MB
-# serve_from_rclone: false
-# verify_download_link: false
-# force_ipv6: false
 # on_library_update: sh plex_update.sh "$@"
 
+# List of directory definitions and their filtering rules
 directories:
+  # Configuration for anime shows
   anime:
-    group_order: 10
-    group: media
+    group: media # directories on different groups have duplicates of the same torrent
+    group_order: 10 # group order = priority, it defines who eats first on a group
     filters:
-      - regex: /\b[a-fA-F0-9]{8}\b/
-      - any_file_inside_regex: /\b[a-fA-F0-9]{8}\b/
+      - and: # you can use nested 'and' & 'or' conditions
+        - has_episodes: true # intelligent detection of episode files inside a torrent
+        - any_file_inside_regex: /^\[/ # usually anime starts with [ e.g. [SubsPlease]
+        - any_file_inside_not_regex: /s\d\de\d\d/i # and usually anime doesn't use SxxExx
 
   shows:
-    group_order: 20
     group: media
+    group_order: 20
     filters:
-      - has_episodes: true
+      - has_episodes: true  # intelligent detection of episode files inside a torrent
 
   movies:
-    group_order: 30
-    group: media
-    only_show_the_biggest_file: true
+    group: media  # because anime, shows and movies are in the same group,
+    group_order: 30 # and anime and shows has a lower group_order number than movies, all torrents that doesn't fall into the previous 2 will fall into movies
+    only_show_the_biggest_file: true # let's not show the other files besides the movie itself
     filters:
       - regex: /.*/
 ```
 
 ## Testing
 
-Test everything manually to make sure each soft works properly:
+Test everything manually to make sure it works properly:
 
 Simply run the binary and check the standard output for any errors.
 

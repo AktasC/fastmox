@@ -10,9 +10,7 @@
 
 ## Testing
 
-Test everything manually to make sure each soft works properly:
-
-#### RClone
+Test everything manually to make sure it works properly:
 
 * `./rclone mount zurg: /mnt/zurg --config=/opt/zurg-testing/rclone.conf --log-level=INFO --log-file=/opt/zurg-testing/zurg.log --allow-other --cache-dir=/mnt/cache/ --dir-cache-time=30s`
 

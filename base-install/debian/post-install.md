@@ -31,5 +31,8 @@ _I'm not using vi. Not yet. Sorry Prime._
 update-alternatives --set editor /usr/bin/micro
 ```
 
+You can use the Proxmox VE Post Install Script
+
 ```bash
+bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
 ```
