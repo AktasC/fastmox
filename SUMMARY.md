@@ -6,7 +6,9 @@
 ## 🥇 Base Install
 
 * [🪱 Debian](base-install/debian/README.md)
+  * [Post Install](base-install/debian/post-install.md)
   * [PCI Passthrough](base-install/debian/pci-passthrough.md)
+  * [Page](base-install/debian/page.md)
 
 ## 🍿 Movies & Shows
 
