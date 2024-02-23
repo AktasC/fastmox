@@ -35,21 +35,45 @@ The base system will be an Ubuntu LXC provided by @tteck which will have GPU pas
 The content media will be cloned from "RD" using `rclone` with `zurg` .\
 This way, I only have symlinks to the RD webdav and don't need to store everything locally.
 
+#### Why not Jellyfin ? It's way better in every way !
+
+Because I have a lifetime plex pass and everyone's devices are already setup with Plex, with passwords etc ...\
+Basically, it's because I'm lazy and cheap lmao.
+
 ### Cosmos-Cloud
 
-Alright, so this might be the most controversial part but hear me out:
+#### Why use Cosmos and not X ?
 
-**Portainer is great** and offers a whole set of tools when it comes to container management, I've used it for many months on my main rig with an `*arr` cluster and several other services.\
+Alright, so this might be the most controversial part but hear me out.
+
+**Portainer is great** and offers a whole set of tools when it comes to container management, I've used it for many months on my main rig with an `*arr` stack and several other services.\
 The reason why I didn't want to go the Portainer route this time is simple: I'm getting old and lazy.\
 I don't need all of the tools Portainer is providing, and I'll already have enough to do with the experiments I want to conduct anyways, so why add weight to an otherwise pretty slim setup ?
 
-A lot of people talk about [CasaOS](https://casaos.io/), which is a distribution developed by [Zima Board](https://www.zimaboard.com/).\
+A lot of people also talk about [CasaOS](https://casaos.io/), which is a distribution developed by [Zima Board](https://www.zimaboard.com/).\
 I've used it for two weeks, in a privileged LXC, with Plex and other services running on it and, honestly, it was a pretty good experience.\
 But, this time, the problem is that I can't help but feel like it's not secure enough and not hackable / customisable enough.\
-I'm aware that [ZimaOS](https://github.com/IceWhaleTech/zimaos-rauc) is currently under development and will address the remote access & authentication weaknesses of CasaOs, but it's nowhere near a public release.\
+&#x20;   I'm aware that [ZimaOS](https://github.com/IceWhaleTech/zimaos-rauc) is currently under development and will address the remote access & authentication weaknesses of CasaOs, but it's nowhere near a public release.\
 I will keep an eye on it, but for now I need something a bit more mature.
 
-Without further ado, enter [Cosmos-Cloud](https://cosmos-cloud.io/).\
+Without further ado, enter [Cosmos-Cloud](https://cosmos-cloud.io/).
+
 In a few words, Cosmos comes with an integrated VPN and reverse proxy, 2FA and SSO authentication solutions, a more granular container management system and a bigger "marketplace".\
-Suffice to say it looks and feels a bit more serious than CasaOS.
+Suffice to say it looks and feels a bit more serious than CasaOS to me.
+
+### Pterodactyl
+
+This one is pretty simple to explain: I've got a bunch of friends with whom I enjoy CS and Palworld among other games, for which I would like to have dedicated servers. &#x20;
+
+Pterodactyl works well with SteamCMD and doesn't seem to suffer the same issues as AMP when it comes to running in an LXC (VMs and barebone installs are the prefered way apparently).
+
+That being said, Ptero really isn't the easiest to run and maintain from what I've read & heard, so this might change in the future.
+
+### Bitwarden
+
+I know a lot of you probably expect to hear that I'm going to use Vaultwarden but that's not the case.\
+At least not in this point in time.
+
+I have nothing but love for Rust, as the GOAT [@ThePrimeagen](https://www.twitch.tv/ThePrimeagen) showed its qualities many times.\
+I just don't want to go into community-made alternatives or rather I'd like to have the most vanilla / simple experience possible.
 
