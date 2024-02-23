@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: true
+---
+
 # 🪱 Debian
 
 ## Pre-Requisites
@@ -9,9 +23,4 @@ This means that I won't be writing how you should use Rufus or `dd` to flash a U
 
 In my humble opinion, if you can't do those things without using a guide, you've got better things to do than reading this.
 
-### Post-Install
-
-### PCI Passthrough
-
-### Docker
-
+Once you've got [Proxmox installed](https://pve.proxmox.com/wiki/Installation), things can finally start.
