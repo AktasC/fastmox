@@ -4,7 +4,7 @@ description: >-
   use.
 ---
 
-# Hardware & Software
+# 🛠️ Hardware & Software
 
 ## Hardware
 
