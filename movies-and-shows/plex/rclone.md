@@ -3,7 +3,7 @@
 ## First steps
 
 1. `cd /opt`
-2. `wget -q- https://downloads.rclone.org/rclone-current-linux-amd64.zip`
+2. `wget -q https://downloads.rclone.org/rclone-current-linux-amd64.zip`
 3. `unzip rclone-current-linux-amd64.zip`
 4. `mv rclone-v{x.yy.zz}-linux-amd64/rclone /opt/zurg-testing/`
 5. `cd zurg-testing; sudo chmod +x ./rclone`

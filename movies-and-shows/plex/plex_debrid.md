@@ -10,7 +10,7 @@ description: The final part of the trifecta
 
 Install pip.
 
-1. `wget -q- https://bootstrap.pypa.io/get-pip.py`
+1. `wget -q https://bootstrap.pypa.io/get-pip.py`
 2. `python3 get-pip.py`
 3. `rm get-pip.py`
 
