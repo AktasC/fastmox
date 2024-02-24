@@ -3,11 +3,14 @@
 ## First steps
 
 1. `mkdir /mnt/zurg /mnt/cache`
-2. `cd /opt`
-3. `git clone https://github.com/debridmediamanager/zurg-testing`
-4. `cd zurg-testing/`
-5. `mv releases/v0.9.3-hotfix.6/zurg-v0.9.3-hotfix.6-darwin-amd64.zip zurg.zip unzip ./zurg.zip`
-6. `sudo chmod +x ./zurg`
+2. `apt-get install libxml2-utils`
+3. `cd /opt`
+4. `git clone https://github.com/debridmediamanager/zurg-testing`
+5. `cd zurg-testing/`
+6. `mv releases/v0.9.3-hotfix.6/zurg-v0.9.3-hotfix.6-darwin-amd64.zip ../zurg.zip`
+7. `unzip ../zurg.zip`
+8. `mv ../zurg/zurg .`
+9. `sudo chmod +x ./zurg`
 
 ## Edit config.yaml
 
