@@ -101,4 +101,4 @@ StartLimitBurst=5
 WantedBy=multi-user.target
 ```
 
-Run `sudo systemctl enable zurg`
+Run `systemctl enable zurg`

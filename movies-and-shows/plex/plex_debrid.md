@@ -6,12 +6,20 @@ description: The final part of the trifecta
 
 ## First Steps
 
-1. Install Pip
-2. `cd /opt`
-3. `git clone https://github.com/itsToggle/plex_debrid`
-4. `cd plex_debrid/`
-5. `pip install -r ./plex_debrid/requirements.txt`
-6. `python3 main.py`
+1. `cd /opt`
+
+Install pip.
+
+1. `wget -q- https://bootstrap.pypa.io/get-pip.py`
+2. `python3 get-pip.py`
+3. `rm get-pip.py`
+
+Once that's done, we can set up Plex\_Debrid
+
+1. `git clone https://github.com/itsToggle/plex_debrid`
+2. `cd plex_debrid/`
+3. `pip install -r ./plex_debrid/requirements.txt`
+4. `python3 main.py`
 
 Once here, follow the interactive shell to have a basic setup.
 
@@ -409,3 +417,5 @@ The second step is to make sure the releases found by plex\_debrid are actually 
 _For that, simply login to_ [_Real-Debrid_](https://real-debrid.com/) _and look for the latest downloads in the `Torrents` tab._
 
 If not, there's an issue with your settings. Go back and fix that :poop:.
+
+If everything's good then **Congratulations** :tada:

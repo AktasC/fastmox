@@ -2,11 +2,11 @@
 
 ## First steps
 
-1. `cd`
+1. `cd /opt`
 2. `wget -q- https://downloads.rclone.org/rclone-current-linux-amd64.zip`
 3. `unzip rclone-current-linux-amd64.zip`
-4. `mv rclone-current-linux-amd64/rclone /opt/zurg-testing/`
-5. `cd /opt/zurg-testing; sudo chmod +x ./rclone`
+4. `mv rclone-v{x.yy.zz}-linux-amd64/rclone /opt/zurg-testing/`
+5. `cd zurg-testing; sudo chmod +x ./rclone`
 
 ## Testing
 
@@ -48,4 +48,4 @@ StartLimitBurst=3
 WantedBy=multi-user.target
 ```
 
-Run `sudo systemctl enable rclone`
+Run `systemctl enable rclone`
