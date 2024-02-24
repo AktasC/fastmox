@@ -17,7 +17,7 @@ This made me check for spare parts I had laying around and, lo and behold, I had
 
 All of the hardware listed below sits in a cute little Jonsbo D41 Mesh :heart:
 
-<table data-header-hidden><thead><tr><th width="158"></th><th></th></tr></thead><tbody><tr><td>CPU</td><td>AMD Ryzen 5 2600X</td></tr><tr><td>Cooler</td><td>ThermalRight Peerless Assassin 120</td></tr><tr><td>Motherboard</td><td>Asus TUF Gaming B450M-Plus II</td></tr><tr><td>RAM</td><td>2 x G.Skill Trident Z Neo 16G @3600MHz CL16</td></tr><tr><td>GPU</td><td>Asus GTX 1070 Dual</td></tr><tr><td>Fast Storage</td><td>Crucial P3 Plus 1To M.2 NVMe </td></tr><tr><td>Bulk Storage</td><td>2 x Western Digital Blue 4T HDD @7200RPM </td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="158"></th><th></th></tr></thead><tbody><tr><td>CPU</td><td>AMD Ryzen 5 2600X</td></tr><tr><td>Cooler</td><td>ThermalRight Peerless Assassin 120</td></tr><tr><td>Motherboard</td><td>Asus TUF Gaming B450M-Plus II</td></tr><tr><td>RAM</td><td>2 x G.Skill Trident Z Neo 16GB @3600MHz CL16</td></tr><tr><td>GPU</td><td>Asus GTX 1070 Dual 8GB</td></tr><tr><td>Fast Storage</td><td>Crucial P3 Plus 1To M.2 NVMe </td></tr><tr><td>Bulk Storage</td><td>2 x Western Digital Blue 4T HDD @7200RPM </td></tr></tbody></table>
 
 ## Software Stack
 

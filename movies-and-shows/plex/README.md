@@ -20,13 +20,22 @@ For example, I've seen the LXC briefly spike up to 6.3GB of RAM usage by times, 
 
 ***
 
+Through the Proxmox GUI:
+
+* `Options` section
+* Click on `Features`
+* Enable `FUSE`
+
+Once you're done, head to the `console`
+
 ```bash
-# Always create a user
+# Installing basic tools.
 apt-get update; apt-get dist-upgrade -y; apt-get install sudo curl git micro
 ```
 
 ```bash
-adduser lupus; usermod -aG sudo lupus; exit
+# Let's create a secure non-root user for ssh & docker purposes
+adduser -m deuspi; usermod -aG sudo deuspi; passwd deuspi
 ```
 
-Log in back as the newly created user to continue the operations.
+Log in back, through SSH, as the newly created user to continue the operations.
