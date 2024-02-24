@@ -14,6 +14,7 @@
 * [🎥 Plex](movies-and-shows/plex/README.md)
   * [Zurg](movies-and-shows/plex/zurg.md)
   * [RClone](movies-and-shows/plex/rclone.md)
+  * [Plex\_Debrid](movies-and-shows/plex/plex\_debrid.md)
 
 ## 🧪 Laboratory
 
