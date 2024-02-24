@@ -30,12 +30,12 @@ Once you're done, head to the `console`
 
 ```bash
 # Installing basic tools.
-apt-get update; apt-get dist-upgrade -y; apt-get install sudo curl git micro
+apt-get update; apt-get dist-upgrade -y; apt-get install curl git micro
 ```
 
 ```bash
-# Let's create a secure non-root user for ssh & docker purposes
-adduser -m deuspi; usermod -aG sudo deuspi; passwd deuspi
+micro /etc/ssh/sshd_config
 ```
 
-Log in back, through SSH, as the newly created user to continue the operations.
+Set `PermitRootLogin` to `yes` \
+Don't forget to remove that / comment back that line once the setup's finished.&#x20;

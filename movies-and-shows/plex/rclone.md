@@ -27,12 +27,17 @@ After=network-online.target
 Type=notify
 ExecStart=/opt/zurg-testing/rclone mount \
   zurg: /mnt/zurg \
+  --allow-other \
+  --allow-non-empty \
+  --async-read \
+  --cache-dir=/mnt/cache/ \
   --config=/opt/zurg-testing/rclone.conf \
+  --dir-cache-time=30s \
   --log-level=INFO \
   --log-file=/opt/zurg-testing/zurg.log \
-  --allow-other \
-  --cache-dir=/mnt/cache/ \
-  --dir-cache-time=30s
+  --vfs-cache-mode full \
+  --vfs-cache-max-age 24h \
+  --vfs-cache-max-size 50G
 ExecStop=/bin/bash -c '/bin/fusermount -uz /mnt/zurg; umount /mnt/zurg'
 Restart=on-abort
 RestartSec=1
@@ -42,3 +47,5 @@ StartLimitBurst=3
 [Install]
 WantedBy=multi-user.target
 ```
+
+Run `sudo systemctl enable rclone`
