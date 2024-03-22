@@ -58,8 +58,8 @@ In short, don't fix what's not broken lmao.
 
 The content media will be cloned from Real-Debrid using rclone with zurg.\
 Zurg uses your RD apiToken and regexes to make your movies & shows available through a webDav server.\
-RClone is used to make this webDav Infuse friendly in case your use that app.\
-This way, I only have symlinks to the RD webdav and don't need to store anything locally.
+RClone is used to mount this webDav server into your file system.\
+This way, I only have symlinks to my Real-Debrid caches and don't need to store anything locally.
 
 ### Cosmos-Cloud
 
