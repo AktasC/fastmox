@@ -2,7 +2,7 @@
 description: I love my 2600X but there's a 1070 sitting at idle there ...
 ---
 
-# PCI Passthrough
+# 👾 GPU Passthrough
 
 To use hardware encoding and decoding, and thus leave the CPU alone, we have multiple pre-requisites.
 

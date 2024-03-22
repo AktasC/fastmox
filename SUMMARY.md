@@ -7,7 +7,6 @@
 
 * [🪱 Debian](base-install/debian/README.md)
   * [Post Install](base-install/debian/post-install.md)
-  * [PCI Passthrough](base-install/debian/pci-passthrough.md)
 
 ## 🍿 Movies & Shows
 
@@ -15,6 +14,7 @@
   * [Zurg](movies-and-shows/plex/zurg.md)
   * [RClone](movies-and-shows/plex/rclone.md)
   * [Plex\_Debrid](movies-and-shows/plex/plex\_debrid.md)
+* [👾 GPU Passthrough](movies-and-shows/gpu-passthrough.md)
 
 ## 🧪 Laboratory
 
