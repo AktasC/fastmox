@@ -15,9 +15,7 @@ After upgrading my main rig with a 5800X3D (I'm really milking the AM4 platform 
 This made me check for spare parts I had laying around and, lo and behold, I had pretty much everything I needed except for the case and RAM.\
 (I didn't want to reuse the wraith coolers, not even the Max, so I also got the TR Peerless Assassin)
 
-All of the hardware listed below sits in a cute little Jonsbo D41 Mesh :heart:
-
-<table data-header-hidden><thead><tr><th width="158"></th><th></th></tr></thead><tbody><tr><td>CPU</td><td>AMD Ryzen 5 2600X</td></tr><tr><td>Cooler</td><td>ThermalRight Peerless Assassin 120</td></tr><tr><td>Motherboard</td><td>Asus TUF Gaming B450M-Plus II</td></tr><tr><td>RAM</td><td>2 x G.Skill Trident Z Neo 16GB @3600MHz CL16</td></tr><tr><td>GPU</td><td>Asus GTX 1070 Dual 8GB</td></tr><tr><td>Fast Storage</td><td>Crucial P3 Plus 1To M.2 NVMe </td></tr><tr><td>Bulk Storage</td><td>2 x Western Digital Blue 4T HDD @7200RPM </td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="158"></th><th></th></tr></thead><tbody><tr><td>Case</td><td>Jonsbo D41 Mesh <span data-gb-custom-inline data-tag="emoji" data-code="2764">❤️</span></td></tr><tr><td>CPU</td><td>AMD Ryzen 5 2600X</td></tr><tr><td>Cooler</td><td>ThermalRight Peerless Assassin 120 <span data-gb-custom-inline data-tag="emoji" data-code="2764">❤️</span></td></tr><tr><td>Motherboard</td><td>Asus TUF Gaming B450M-Plus II</td></tr><tr><td>RAM</td><td>2 x G.Skill Trident Z Neo 16GB @3600MHz CL16 </td></tr><tr><td>GPU</td><td>Asus GTX 1070 Dual 8GB</td></tr><tr><td>Fast Storage</td><td>Crucial P3 Plus 1To M.2 NVMe </td></tr><tr><td>Bulk Storage</td><td>2 x Western Digital Blue 4T HDD @7200RPM </td></tr></tbody></table>
 
 ## Software Stack
 
@@ -28,13 +26,14 @@ My home server has two purposes:
 
 ### Proxmox
 
-There's a world where I would have setup everything on a barebone Debian netinstall.
+There's a world where I would have setup everything on a barebone Debian netinstall.\
+Another world in which I would have gone the TrueNAS ...
 
 But. Remember. _C O N V E N I E N C E_&#x20;
 
 * Built-in backups & snapshots
 * Running multiple VMs and LXCs with a few clicks.
-* Web-based GUI, which makes management a breaze.
+* Web-based GUI, which makes management a breeze.
 
 Also, I never used Proxmox before February 2024.\
 Deciding between it, UnRaid and TrueNAS wasn't an easy decision to take.
@@ -57,7 +56,11 @@ In short, don't fix what's not broken lmao.
 
 #### Zurg & RClone
 
-The content media will be cloned from "RD" using rclone with zurg.\
+The content media will be cloned from Real-Debrid using rclone with zurg.\
+Zurg uses your RD apiToken to make your files available through a webDav server.\
+RClone is used to make this webDav Infuse friendly in case your use that app.
+
+\
 This way, I only have symlinks to the RD webdav and don't need to store anything locally.
 
 ### Cosmos-Cloud
