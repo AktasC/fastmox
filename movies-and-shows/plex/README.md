@@ -9,13 +9,13 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/plex.sh)"
 This will create an LXC dedicated to Plex Media Server and allocate it 2G of RAM, 8G of storage and 2 vCores by default.\
 Personally, I'll adjust the allocated ressources such as:
 
-* RAM: 8192 MB
-* SWAP: 1024 MB
+* RAM: 4096 MB
+* SWAP: 2048 MB
 * Storage: 128 GB
-* CPU: 4 vCores
+* CPU: 6 vCores
 
 While I'll locally store symlinks to the files on Real-Debrid, and thus shouldn't need that much storage, there might be times where Plex pulls the whole file for media analysis among other things.\
-That, and the way RClone & zurg work are the reasonwhy I bumped both the RAM, swap and storage allocations.\
+That, and the way RClone & Zurg work are the reason why I bumped up both the vCPU, RAM, Swap and storage allocations.\
 For example, I've seen the LXC briefly spike up to 6.3GB of RAM usage by times, though the average usage for the past week's orbiting around 1GB.
 
 ***
@@ -37,5 +37,4 @@ apt-get update; apt-get dist-upgrade -y; apt-get install curl git micro
 micro /etc/ssh/sshd_config
 ```
 
-Set `PermitRootLogin` to `yes` \
-Don't forget to remove that / comment back that line once the setup's finished.&#x20;
+Set `PermitRootLogin` to `yes`&#x20;
