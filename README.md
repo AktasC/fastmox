@@ -34,8 +34,8 @@ It'll have its share of bumps and detours – that's the fun of learning, right?
 
 But before you dive in, remember:
 
-* **Brush up first**\
-  Before you get started, consider learning the basics of Debian, SSH, LXC, reverse proxies, and Docker.\
+* **Brace yourself**\
+  Before getting started, consider learning the basics of Debian, SSH, LXC, reverse proxies and Docker.\
   I really won't go much into technical details, the more you know the better it is.
 * **Copy-pasting is risky**\
   Our setups might differ (hardware, anyone?), so adapt these guides as needed.\
