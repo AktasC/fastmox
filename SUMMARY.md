@@ -22,9 +22,9 @@
 * [☁️ SSL & CloudFlare](laboratory/ssl-and-cloudflare.md)
 * [🎮 Pterodactyl](laboratory/pterodactyl.md)
 
-## 🕹️ RG35XXSP
+## 🕹️ RG35XX SP
 
-* [What ? Why ? How ?](rg35xxsp/what-why-how.md)
-* [Extracting](rg35xxsp/extracting.md)
-* [Transforming](rg35xxsp/transforming.md)
-* [Loading](rg35xxsp/loading.md)
+* [What ? Why ? How ?](rg35xx-sp/what-why-how.md)
+* [Extracting](rg35xx-sp/extracting.md)
+* [Transforming](rg35xx-sp/transforming.md)
+* [Loading](rg35xx-sp/loading.md)
