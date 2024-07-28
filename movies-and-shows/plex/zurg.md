@@ -11,7 +11,7 @@ apt-get install libxml2-utils
 ```
 
 ```bash
-cd /opt ; git clone https://github.com/debridmediamanager/zurg-testing ; cd zurg-testing/
+git clone https://github.com/debridmediamanager/zurg-testing /opt/zurg-testing/ ; cd /opt/zurg-testing/
 ```
 
 ```bash
