@@ -21,7 +21,7 @@ mv ../zurg/zurg . ;
 sudo chmod +x ./zurg
 ```
 
-## Edit config.yaml
+## Edit config.yml
 
 ```yaml
 zurg: v1
@@ -55,20 +55,22 @@ use_download_cache: true
 
 # List of directory definitions and their filtering rules
 directories:
-  # Configuration for anime shows
-  anime:
+  # Configuration for anime needs too much tuning, ain't nobody have time for that.
+  shows:
     group: media # directories on different groups have duplicates of the same torrent
     group_order: 10 # group order = priority, it defines who eats first on a group
     filters:
       - and: # you can use nested 'and' & 'or' conditions
         - has_episodes: true # intelligent detection of episode files inside a torrent
-        - any_file_inside_regex: /^\[/ # usually anime starts with [ e.g. [SubsPlease]
-        - any_file_inside_not_regex: /s\d\de\d\d/i # and usually anime doesn't use SxxExx
-  shows:
+        - any_file_inside_regex: /(S\d{1,2}E\d{1,2}|shogun|kingstown)/i # If it follows SxxExx pattern or contains specific words 
+        - any_file_inside_not_regex: /.*(?:wakfu|one.piece|kid.paddle|solo.leveling).*/i # 
+
+  anime: # Gets the remaining folders with episodes.
     group: media
     group_order: 20
     filters:
       - has_episodes: true  # intelligent detection of episode files inside a torrent
+  
   movies:
     group: media  # because anime, shows and movies are in the same group,
     group_order: 30 # and anime and shows has a lower group_order number than movies, all torrents that doesn't fall into the previous 2 will fall into movies
