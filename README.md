@@ -17,16 +17,16 @@ layout:
 
 ### Introduction
 
-> Hi, eryone! This a Yi Long Ma !
-
 Welcome to my collection of notes and scripts for my home server setup, basically an overpowered notepad to save me the pain of rebuilding it from scratch.\
-Think of it as my personal collection of cheatsheets.\
-_Also, I'm not a native English speaker, bear with me or eat a baguette._
+Think of it as my personal collection of cheatsheets.
+
+\
+_Also, I'm not a native English speaker, bear with me or eat a baguette idk 🥖_
 
 ### Disclaimer
 
 Heads up, I'm a software engineer by trade, but more on the business side these days.\
-So, don't expect fancy devOps or sysadmin stuff. I haven't mastered that magic yet. 🤡\
+So, don't expect fancy DevOps or SysAdmin stuff. I haven't mastered that magic yet. 🤡\
 That being said, I've been using Linux for over 10 years and started my dev journey with the glorious C programming language.
 
 This ain't a fancy guide with details, explanations, all the bells and whistles.\
