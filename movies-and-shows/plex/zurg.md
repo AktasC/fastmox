@@ -1,5 +1,7 @@
 # Zurg
 
+[This section is currently obsolete](#user-content-fn-1)[^1]
+
 ## First steps
 
 ```bash
@@ -116,3 +118,5 @@ WantedBy=multi-user.target
 ```
 
 Run `systemctl enable zurg`
+
+[^1]: Zurg's developer changed the repo's structure and how binaries are delivered.
