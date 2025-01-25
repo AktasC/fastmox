@@ -16,19 +16,19 @@
   * [Plex\_Debrid](movies-and-shows/plex/plex_debrid.md)
 * [👾 GPU Passthrough](movies-and-shows/gpu-passthrough.md)
 
-## 🧪 Laboratory
+## 🧪 Laboratory - TBD
 
-* [🌌 Cosmos](laboratory/cosmos.md)
-* [☁️ SSL & CloudFlare](laboratory/ssl-and-cloudflare.md)
-* [🎮 AMP](laboratory/amp.md)
+* [🌌 Cosmos](laboratory-tbd/cosmos.md)
+* [☁️ SSL & CloudFlare](laboratory-tbd/ssl-and-cloudflare.md)
+* [🎮 AMP](laboratory-tbd/amp.md)
 
-## 3D Printing
+## 3D Printing - WIP
 
-* [⚙️ Calibration](3d-printing/calibration.md)
+* [⚙️ Calibration](3d-printing-wip/calibration.md)
 
 ## Archived
 
 * [What ? Why ? How ?](archived/what-why-how.md)
 * [Extracting](archived/extracting.md)
-* [Transforming](archived/transforming/README.md)
-  * [Loading](archived/transforming/loading.md)
+* [Transforming](archived/transforming.md)
+* [Loading](archived/loading.md)
