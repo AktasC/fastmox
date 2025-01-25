@@ -414,7 +414,7 @@ Once you've configured `plex_debrid` test it by adding a movie or tv show to you
 Check if there are any error messages, if not: GG :tada:, but that's just the first step.
 
 The second step is to make sure the releases found by plex\_debrid are actually downloaded.\
-_For that, simply login to_ [_Real-Debrid_](https://real-debrid.com/) _and look for the latest downloads in the `Torrents` tab._
+&#xNAN;_&#x46;or that, simply login to_ [_Real-Debrid_](https://real-debrid.com/) _and look for the latest downloads in the `Torrents` tab._
 
 If not, there's an issue with your settings. Go back and fix that :poop:.
 

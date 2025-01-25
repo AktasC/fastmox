@@ -21,7 +21,7 @@ Welcome to my collection of notes and scripts for my home server setup, basicall
 Think of it as my personal collection of cheatsheets.
 
 \
-_Also, I'm not a native English speaker, bear with me or eat a baguette idk 🥖_
+&#xNAN;_&#x41;lso, I'm not a native English speaker, bear with me or eat a baguette idk 🥖_
 
 ### Disclaimer
 
