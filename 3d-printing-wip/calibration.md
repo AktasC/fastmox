@@ -62,8 +62,8 @@ Then you can make a second pass with startValue and maxValue set according to yo
 
 To find the your filament's ideal P.A value:
 
-1. Find the line with the smallest value where the tip is slightly raised
-2. Find the line with the highest value where the tip is rounded
+1. Find the line with the smallest value where the tip is sharp but slightly raised
+2. Find the line with the highest value, but below the previous value, where the tip is rounded
 3. Your ideal value is somewhere between those two\
    I'd even go as far as to say it probably is the one 2 steps below the line you found in the first step.
 
