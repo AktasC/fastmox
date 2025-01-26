@@ -26,6 +26,8 @@ As I have a P1S, I'll follow these steps:&#x20;
 **Start fresh**. Create a new generic filament profile.\
 &#xNAN;_&#x42;rands update their recipes so the PLA you buy right now from X might not be the same as the "same" ones you bought 3 years ago._
 
+***
+
 ### Temperature
 
 First things first: find the ideal temperature in the "normal" range given by the manufacturer.
@@ -34,31 +36,37 @@ Look for overhangs first, then bridges and finally overall surface quality.
 
 Once you found the proper temperature:
 
-* Update the filament profile accordingly.\
+* [ ] Update the filament profile accordingly.\
   `First Layer Temp = Ideal Temperature + 5°C`
-* Save your profile & quit the project.
+* [ ] Save your profile & quit the project.
+
+***
 
 ### Flow Rate
 
-* Run the **YOLO** test included in Orca Slicer (2.2.0+).
-* Update your filament profile accordingly.
+* [ ] Run the **YOLO** test included in Orca Slicer (2.2.0+).
+* [ ] Update your filament profile accordingly.
 
 _Proceed again if you're really picky and think quality might get even better._\
 _I'd side with Goodenov._
 
+***
+
 ### Pressure Advance
 
-### Retraction&#x20;
+
+
+***
+
+### Retraction
+
+_Cause ain't nobody wanna see spidey webs on their prints._
+
+***
 
 ### Max Volumetric Speed
 
-This allows you to find how much your printer can actually go _Brrrrrrrrrrrrrrrrrrrrrrrrrrrr_
-
-
-
-
-
-
+_This allows you to find how much your printer can actually go Brrrrrrrrrrrrrrrrrrrrrrrrrrrr_
 
 
 
