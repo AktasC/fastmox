@@ -25,6 +25,7 @@
 ## 3D Printing - WIP
 
 * [⚙️ Calibration](3d-printing-wip/calibration.md)
+* [Filament Profiles](3d-printing-wip/filament-profiles.md)
 
 ## Archived
 
