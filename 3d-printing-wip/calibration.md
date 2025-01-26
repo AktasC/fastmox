@@ -54,13 +54,26 @@ _I'd side with Goodenov._
 
 ### Pressure Advance
 
+Run the `Pattern` calibration process, the tower method is harder to gauge and the line method takes as long as the pattern method with less "precision".
 
+Most of the time my ideal value is somewhere around `0.015`.\
+You can make an initial broader pass with a startValue of 0, maxValue of 0.4 and a stepValue of 0.05.\
+Then you can make a second pass with startValue and maxValue set according to your first results and a finer stepvalue of 0.01 or 0.005 if you're REALLY into torturing your eyes and mind.
+
+To find the your filament's ideal P.A value:
+
+1. Find the line with the smallest value where the tip is slightly raised
+2. Find the line with the highest value where the tip is rounded
+3. Your ideal value is somewhere between those two\
+   I'd even go as far as to say it probably is the one 2 steps below the line you found in the first step.
+
+Note your value, quit the project, discard the changes, open a new project, update your filament profile and save it. _Twice. Just make sure it's saved._
 
 ***
 
-### Retraction
+### Retraction (optional)
 
-_Cause ain't nobody wanna see spidey webs on their prints._
+_Cause ain't nobody wanna see spidey webs on their prints, right ?_
 
 ***
 
@@ -68,5 +81,14 @@ _Cause ain't nobody wanna see spidey webs on their prints._
 
 _This allows you to find how much your printer can actually go Brrrrrrrrrrrrrrrrrrrrrrrrrrrr_
 
+You need to understand that setting print speed to 300mm.s won't change anything if your filament's max flowrate is set at 15mm^3.s; that's why we need to find how fast it can go before going Brrrrrrrrr.
 
+Most PLA & PETG can be printed at around 15-20mm3/s with no issues on the P1S.\
+&#xNAN;_(That being said, I've installed a CHT nozzle on mine and reached a clean 28mm3/s on most PLA)_
+
+Run the calibration process with a `startValue` at 10 or 15, a maxValue of 35 and a stepValue of 0.5 .
+
+Use the following calculation to determine the correct max flow value:
+
+`startValue + {measureHeight * stepValue}`&#x20;
 
