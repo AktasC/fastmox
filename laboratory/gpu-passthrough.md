@@ -157,7 +157,7 @@ chmod +x nvidia-550.67.run
 
 ### References
 
-* [https://pve.proxmox.com/wiki/PCI\_Passthrough](https://pve.proxmox.com/wiki/PCI\_Passthrough)
-* [https://wiki.archlinux.org/title/PCI\_passthrough\_via\_OVMF](https://wiki.archlinux.org/title/PCI\_passthrough\_via\_OVMF)
+* [https://pve.proxmox.com/wiki/PCI\_Passthrough](https://pve.proxmox.com/wiki/PCI_Passthrough)
+* [https://wiki.archlinux.org/title/PCI\_passthrough\_via\_OVMF](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF)
 * [https://jocke.no/2022/02/23/plex-gpu-transcoding-in-docker-on-lxc-on-proxmox/](https://jocke.no/2022/02/23/plex-gpu-transcoding-in-docker-on-lxc-on-proxmox/)
-* [The Ultimate Beginner's Guide to GPU Passthrough](https://www.reddit.com/r/homelab/comments/b5xpua/the\_ultimate\_beginners\_guide\_to\_gpu\_passthrough/)
+* [The Ultimate Beginner's Guide to GPU Passthrough](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
