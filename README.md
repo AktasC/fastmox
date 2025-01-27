@@ -20,8 +20,9 @@ layout:
 Welcome to my collection of notes and scripts for my home server setup, basically an overpowered notepad to save me the pain of rebuilding it from scratch.\
 Think of it as my personal collection of cheatsheets.
 
-\
-&#xNAN;_&#x41;lso, I'm not a native English speaker, bear with me or eat a baguette idk 🥖_
+{% hint style="info" %}
+_I'm not a native English speaker, bear with me or eat a baguette idk 🥖_
+{% endhint %}
 
 ### Disclaimer
 
