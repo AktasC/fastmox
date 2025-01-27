@@ -10,14 +10,13 @@
 
 ## 🍿 Movies & Shows
 
-* [🎥 Plex](movies-and-shows/plex.md)
-* [Zurg](movies-and-shows/zurg.md)
-* [RClone](movies-and-shows/rclone.md)
-* [Plex\_Debrid](movies-and-shows/plex_debrid.md)
-* [👾 GPU Passthrough](movies-and-shows/gpu-passthrough.md)
-
 ## 🧪 Laboratory - TBD
 
+* [🎥 Plex](laboratory-tbd/plex.md)
+* [Zurg](laboratory-tbd/zurg.md)
+* [RClone](laboratory-tbd/rclone.md)
+* [Plex\_Debrid](laboratory-tbd/plex_debrid.md)
+* [👾 GPU Passthrough](laboratory-tbd/gpu-passthrough.md)
 * [🌌 Cosmos](laboratory-tbd/cosmos.md)
 * [☁️ SSL & CloudFlare](laboratory-tbd/ssl-and-cloudflare.md)
 * [🎮 AMP](laboratory-tbd/amp.md)
