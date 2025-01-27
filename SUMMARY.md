@@ -10,10 +10,10 @@
 
 ## 🍿 Movies & Shows
 
-* [🎥 Plex](movies-and-shows/plex/README.md)
-  * [Zurg](movies-and-shows/plex/zurg.md)
-  * [RClone](movies-and-shows/plex/rclone.md)
-  * [Plex\_Debrid](movies-and-shows/plex/plex_debrid.md)
+* [🎥 Plex](movies-and-shows/plex.md)
+* [Zurg](movies-and-shows/zurg.md)
+* [RClone](movies-and-shows/rclone.md)
+* [Plex\_Debrid](movies-and-shows/plex_debrid.md)
 * [👾 GPU Passthrough](movies-and-shows/gpu-passthrough.md)
 
 ## 🧪 Laboratory - TBD
@@ -25,7 +25,7 @@
 ## 🛥️ 3D Printing
 
 * [⚙️ Calibration](3d-printing/calibration.md)
-* [Filament Profiles](3d-printing/filament-profiles.md)
+* [ℹ️ Filament Profiles](3d-printing/filament-profiles.md)
 
 ## Archived
 

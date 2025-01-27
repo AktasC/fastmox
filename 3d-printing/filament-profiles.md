@@ -2,7 +2,7 @@
 description: Bear in mind these numbers are only valid with the CHT nozzle.
 ---
 
-# Filament Profiles
+# ℹ️ Filament Profiles
 
 
 
