@@ -22,7 +22,7 @@
 * [☁️ SSL & CloudFlare](laboratory-tbd/ssl-and-cloudflare.md)
 * [🎮 AMP](laboratory-tbd/amp.md)
 
-## 🏺 3D Printing
+## 🛥️ 3D Printing
 
 * [⚙️ Calibration](3d-printing/calibration.md)
 * [Filament Profiles](3d-printing/filament-profiles.md)
