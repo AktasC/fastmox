@@ -112,3 +112,5 @@ This one is pretty self explanatory so ...\
 
 Look for the height where there are no strings and no blobs visible.\
 _Don't forget to update your filament profile with the result value._
+
+_In my case, I rarely go above 0.2mm with the P1S._
