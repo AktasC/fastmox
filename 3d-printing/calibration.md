@@ -69,7 +69,7 @@ To find the your filament's ideal P.A value:
 3. Your ideal value is somewhere between those two\
    I'd even go as far as to say it probably is the one 2 steps below the line you found in the first step.
 
-Note your value, quit the project, discard the changes, open a new project, update your filament profile with said value.\
+Note your value, quit the project, discard the changes, open a new project and update your filament profile with said value.\
 &#xNAN;_&#x53;ave it. Twice. Just to make sure._
 
 ***
