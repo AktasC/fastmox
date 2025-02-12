@@ -46,11 +46,14 @@ Once you found the proper temperature:
 
 ### Flow Rate
 
-* [ ] Run the **YOLO** test included in Orca Slicer (2.2.0+).
-* [ ] Update your filament profile accordingly.
+* [ ] Run the **YOLO (Recommended)** test included in Orca Slicer (2.2.0+).
+* [ ] Find the print with the smoothest top surface, don't pay attention to corners or the value text.
+* [ ] Update your filament profile's pressure advance value accordingly and save it.
+* [ ] Create a new project & discard all changes.
+* [ ] Run the **YOLO (Perfectionist)** test to fine-tune.
 
-_Proceed again if you're really picky and think quality might get even better._\
-_I'd side with Goodenov._
+_Run the perfectionist test once more if you're **really** picky and think quality might get even better._\
+_I'd side with Goodenov since we're already running both tests once each._
 
 ***
 
