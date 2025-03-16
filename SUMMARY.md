@@ -10,7 +10,10 @@
 
 ## 🧪 Laboratory
 
-* [👾 GPU Passthrough](laboratory/gpu-passthrough.md)
+* [👾 GPU Passthrough](laboratory/gpu-passthrough/README.md)
+  * [00 - Preparation](laboratory/gpu-passthrough/00-preparation.md)
+  * [10 - Installation](laboratory/gpu-passthrough/10-installation.md)
+  * [20 - Container Setup](laboratory/gpu-passthrough/20-container-setup.md)
 * [🎥 Plex](laboratory/plex/README.md)
   * [Zurg](laboratory/plex/zurg.md)
   * [RClone](laboratory/plex/rclone.md)
