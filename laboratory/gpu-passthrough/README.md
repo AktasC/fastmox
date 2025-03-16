@@ -10,10 +10,10 @@ To use hardware encoding and decoding, and thus leave the CPU alone, we have mul
 
 Before anything else, ensure these features are enabled in your BIOS:
 
-* AMD-VI
+* AMD-VI / Intel VT-d
 * Above 4G Decoding
 
-### Host Setup
+### Node Setup
 
 #### Preparation
 
@@ -27,13 +27,13 @@ Before anything else, ensure these features are enabled in your BIOS:
 [10-installation.md](10-installation.md)
 {% endcontent-ref %}
 
-***
-
 ### LXC Setup
 
 {% content-ref url="20-container-setup.md" %}
 [20-container-setup.md](20-container-setup.md)
 {% endcontent-ref %}
+
+***
 
 ### References
 
