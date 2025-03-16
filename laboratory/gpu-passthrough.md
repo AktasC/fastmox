@@ -8,37 +8,84 @@ To use hardware encoding and decoding, and thus leave the CPU alone, we have mul
 
 ### BIOS
 
-Ensure AMD-Vi / Intel Vtd is enabled
+Ensure these features are enabled:
+
+* AMD-VI
+* Above 4G Decoding
 
 ### Host Setup
 
-SSH into the node / baseInstall where Proxmox sits.
+SSH into the **node** / baseInstall where Proxmox sits.
 
 #### Preparation
 
-```bash
-echo -e "blacklist nouveau\noptions nouveau modeset=0" > /etc/modprobe.d/blacklist-nouveau.conf
-```
-
-Check if VFIO is already enabled for some random reason:
-
-```sh
-lsmod | grep vfio
-```
-
-If not, we'll need to add three lines in `/etc/modules`
+Upgrade the system packages and install essential new ones.
 
 ```bash
-vfio
-vfio_iommu_type1
-vfio_pci
+apt update
+apt upgrade -y
+apt install pve-headers-$(uname -r) build-essential software-properties-common make nvtop htop -y
 ```
 
-Once you're done, apply the changes:
+Now update grub & initramfs
 
 ```bash
+update-grub
 update-initramfs -u -k all
 ```
+
+Download the latest Nvidiot x64 drivers, blacklist `nouveau` & reboot
+
+```bash
+wget "https://us.download.nvidia.com/XFree86/Linux-x86_64/570.124.04/NVIDIA-Linux-x86_64-570.124.04.run"
+chmod +x ./NVIDIA-Linux-x86_64-570.124.04.run
+```
+
+```bash
+systemctl reboot
+```
+
+#### Installation
+
+Run the installer
+
+```bash
+./NVIDIA-Linux-x86_64-570.124.04.run --dkms
+```
+
+* ACCEPT when it offers to handle existing `nouveau`driver
+* ACCEPT when it offers to `rebuild initrafms`
+* REFUSE when it asks for 32bit compability drivers
+* REFUSE when asked if you want to update Xserver config.
+
+```bash
+systemctl reboot
+```
+
+***
+
+#### Optional - Blacklisting generic drivers
+
+If for some reason the installation fails instead of gracefully handling existing drivers
+
+```bash
+echo -e "blacklist nouveau\nblacklist nvidia*\noptions nouveau modeset=0" > /etc/modprobe.d/blacklist-nouveau.conf
+update-grub
+update-initramfs -u -k all
+systemctl reboot
+```
+
+Run the installation again
+
+***
+
+#### Verify the installation
+
+```
+ls -al /dev/nvidia*
+```
+
+If everything went well, you should see `/dev/nvidia0`and `/dev/nvidiactl`
 
 Check if IOMMU is enabled:
 
@@ -52,37 +99,25 @@ Verify IOMMU interrupt remapping is enabled:
 dmesg | grep 'remapping'
 ```
 
-```bash
-apt purge nvidia-*
+Check if VFIO is already enabled for some random reason:
+
+```sh
+lsmod | grep vfio
 ```
 
+If not, we'll need to add three lines in `/etc/modules`
+
 ```bash
-reboot
+echo "vfio" >> /etc/modules
+echo "vfio_iommu_type1" >> /etc/modules
+echo "vfio_pci" >> /etc/modules
 ```
 
-```bash
-apt update; apt dist-upgrade;
-apt install proxmox-headers-$(uname -r)
-```
-
-#### Installation
+Once you're done, apply the changes:
 
 ```bash
-wget -O nvidia-550.67.run https://us.download.nvidia.com/XFree86/Linux-x86_64/550.67/NVIDIA-Linux-x86_64-550.67.run
-```
-
-```bash
-chmod +x nvidia-550.67.run
-# If you want to check the package before running it
-# ./nvidia-550.67.run --check
-
-./nvidia-550.67.run
-# answer "NO" when it asks if you want to install 32bit compability drivers
-# answer "NO" when it asks if it should update X config
-```
-
-```bash
-echo -e '\n# load nvidia modules\nnvidia-drm\nnvidia-uvm' >> /etc/modules-load.d/modules.conf
+update-initramfs -u -k all
+systemctl reboot
 ```
 
 Add these lines in `/etc/udev/rules.d/100-nvidia.rules`
@@ -93,9 +128,11 @@ KERNEL=="nvidia_uvm", RUN+="/bin/bash -c '/usr/bin/nvidia-modprobe -c0 -u && /bi
 SUBSYSTEM=="module", ACTION=="add", DEVPATH=="/module/nvidia", RUN+="/usr/bin/nvidia-modprobe -m"
 ```
 
-#### Persistence Service (Optional)
+***
 
-To avoid that the driver/kernel module is unloaded whenever the GPU is unused.
+#### Optional - Persistence Services
+
+To avoid the driver/kernel module getting unloaded whenever the GPU is unused.
 
 ```bash
 cp /usr/share/doc/NVIDIA_GLX-1.0/samples/nvidia-persistenced-init.tar.bz2 .
@@ -118,6 +155,8 @@ chmod +x nvidia-persistenced-init/install.sh;
 rm -rf nvidia-persistenced-init*
 ```
 
+***
+
 #### LXC Configuration File
 
 Edit `/etc/pve/lxc/101.conf` Add these lines:
@@ -138,26 +177,25 @@ lxc.mount.entry: /dev/nvidia-caps/nvidia-cap2 dev/nvidia-caps/nvidia-cap2 none b
 ### LXC Setup
 
 ```bash
-wget -O nvidia-550.67.run https://us.download.nvidia.com/XFree86/Linux-x86_64/550.67/NVIDIA-Linux-x86_64-550.67.run
+wget "https://us.download.nvidia.com/XFree86/Linux-x86_64/570.124.04/NVIDIA-Linux-x86_64-570.124.04.run"
+chmod +x ./NVIDIA-Linux-x86_64-570.124.04.run
 ```
 
 ```bash
-chmod +x nvidia-550.67.run
-# If you want to check the package before running it
-# ./nvidia-550.67.run --check
-
-./nvidia-550.67.run --no-kernel-module
-# answer "NO" when it asks if you want to install 32bit compability drivers
-# answer "NO" when it asks if it should update X config
+sh ./NVIDIA-Linux-x86_64-570.124.04.run --no-kernel-module
 ```
+
+* REFUSE when it asks for 32bit compability drivers
+* REFUSE when asked if you want to update Xserver config.
 
 ### Reboot and enjoy hardware transcoding
 
-
+***
 
 ### References
 
-* [https://pve.proxmox.com/wiki/PCI\_Passthrough](https://pve.proxmox.com/wiki/PCI_Passthrough)
-* [https://wiki.archlinux.org/title/PCI\_passthrough\_via\_OVMF](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF)
-* [https://jocke.no/2022/02/23/plex-gpu-transcoding-in-docker-on-lxc-on-proxmox/](https://jocke.no/2022/02/23/plex-gpu-transcoding-in-docker-on-lxc-on-proxmox/)
-* [The Ultimate Beginner's Guide to GPU Passthrough](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
+* [PCI Passthrough](https://pve.proxmox.com/wiki/PCI_Passthrough) - Proxmox Wiki&#x20;
+* [PCI Passthrough via OVMF](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF) - Arch Wiki&#x20;
+* [Plex GPU transcoding in Docker on LXC on Proxmox](https://jocke.no/2022/02/23/plex-gpu-transcoding-in-docker-on-lxc-on-proxmox/) - Jocke.no&#x20;
+* [The Ultimate Beginner's Guide to GPU Passthrough](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/) - Reddit&#x20;
+* [Proxmox LXC GPU Passthru Setup Guide](https://digitalspaceport.com/proxmox-lxc-gpu-passthru-setup-guide/) - Digital Spaceport&#x20;
