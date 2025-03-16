@@ -15,7 +15,7 @@
   * [10 - Installation](laboratory/gpu-passthrough/10-installation.md)
   * [20 - Container Setup](laboratory/gpu-passthrough/20-container-setup.md)
 * [🎥 Plex](laboratory/plex/README.md)
-  * [Zurg](laboratory/plex/zurg.md)
+  * [Zurg - Obsolete](laboratory/plex/zurg-obsolete.md)
   * [RClone](laboratory/plex/rclone.md)
   * [Plex\_Debrid](laboratory/plex/plex_debrid.md)
 * [🌌 Cosmos](laboratory/cosmos.md)
