@@ -17,28 +17,30 @@ layout:
 
 ### Introduction
 
-Welcome to my collection of notes and scripts for my home server setup, basically an overpowered notepad to save me the pain of rebuilding it from scratch.\
-Think of it as my personal collection of cheatsheets.
+Welcome to my personal compendium or wiki, basically an overpowered notepad to save me the pain of researching things I've already done and forgot about.\
+This site isn’t meant to be your go-to for exhaustive, hand-holding tutorials ; instead, it’s a living, breathing collection of my technical experiments and solutions.
 
 {% hint style="info" %}
-_I'm not a native English speaker, bear with me or eat a baguette idk 🥖_
+_I'm not a native English speaker so please bear with me, or eat a baguette idk 🥖_
 {% endhint %}
 
 ### Disclaimer
 
-Heads up, I'm a software engineer by trade, but more on the business side these days.\
-So, don't expect fancy DevOps or SysAdmin stuff. I haven't mastered that magic yet. 🤡\
-That being said, I've been using Linux for over 10 years and started my dev journey with the glorious C programming language.
+I'm a software engineer who’s shifted more toward the platfrom architecture side lately.\
+So, while you won’t find deep-dives into fancy DevOps or SysAdmin wizardry here (I'm still learning those dark arcanes), you can bet there's plenty of tech know-how.\
+I've been rocking Linux for over 10 years and started my coding journey with good old C with CodeBlocks, so there's solid experience ~~(and suffering)~~ behind these notes :saluting\_face:
 
-This ain't a fancy guide with details, explanations, all the bells and whistles.\
-It'll have its share of bumps and detours – that's the fun of learning, right?
+**Before You Dive In:**
 
-But before you dive in, remember:
+* **Gear Up:**\
+  I won't always break down every script or snippet, so make sure you're comfortable with the basics.\
+  Think Debian, SSH, LXC, reverse proxies and Docker.
+* **Copy-Paste Caution:**\
+  Our setups can vary (hardware, anyone?), so you'll need to tweak these ""guides"" to fit your environment.\
+  For instance, enabling PCI passthrough often depends on a combination of hardware and software.\
+  Blind copy-pasting might lead to "unexpected hiccups", you've been warned.
+* **Your Call:**\
+  Use the information here at your own risk.\
+  I’m sharing what works for me, but you’re responsible for how you apply it and what you do of it.
 
-* **Brace yourself**\
-  Before getting started, consider learning the basics of Debian, SSH, LXC, reverse proxies and Docker.\
-  I really won't go much into technical details, the more you know the better it is.
-* **Copy-pasting is risky**\
-  Our setups might differ (hardware, anyone?), so adapt these guides as needed.\
-  For example, the way you enable PCI passthrough isn't the same whether your CPU's from Intel or AMD.
-
+If you have suggestions or spot something off, feel free to reach out or open an issue on the GitHub repository.
