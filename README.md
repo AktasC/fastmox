@@ -1,5 +1,5 @@
 ---
-description: Collection of notes & scripts for my home ProxMox server
+description: 3D Printing - Hardware Overclocking - Homelab
 layout:
   title:
     visible: true
@@ -32,14 +32,14 @@ I've been rocking Linux for over 10 years and started my coding journey with goo
 
 **Before You Dive In:**
 
-* **Gear Up:**\
+* **Gear Up**\
   I won't always break down every script or snippet, so make sure you're comfortable with the basics.\
   Think Debian, SSH, LXC, reverse proxies and Docker.
-* **Copy-Paste Caution:**\
-  Our setups can vary (hardware, anyone?), so you'll need to tweak these ""guides"" to fit your environment.\
+* **Copy-Paste Caution**\
+  Our setups can vary (hardware, anyone?), so you'll need to tweak these "_guides_" to fit your environment.\
   For instance, enabling PCI passthrough often depends on a combination of hardware and software.\
-  Blind copy-pasting might lead to "unexpected hiccups", you've been warned.
-* **Your Call:**\
+  Blind copy-pasting might lead to "_unexpected hiccups_", you've been warned.
+* **Your Call**\
   Use the information here at your own risk.\
   I’m sharing what works for me, but you’re responsible for how you apply it and what you do of it.
 

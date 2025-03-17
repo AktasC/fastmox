@@ -25,15 +25,15 @@ Once you're done, ssh into the proxmox install.
 $ apt update; apt dist-upgrade -y; apt install lm-sensors micro curl
 ```
 
-_I'm not using nvim. Not yet. Sorry Prime._
+_I'm not using nvim, wanna fight about it ?_
 
 ```bash
 update-alternatives --set editor /usr/bin/micro
 ```
 
+***
 
-
-You can also use @tteck's Proxmox VE Post Install Script:&#x20;
+You could also use @tteck's Proxmox VE Post Install Script:&#x20;
 
 ```bash
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
