@@ -57,5 +57,5 @@ WantedBy=multi-user.target
 ```
 
 ```bash
-systemctl enable rclone
+sudo systemctl enable rclone
 ```

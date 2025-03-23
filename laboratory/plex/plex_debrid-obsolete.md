@@ -31,10 +31,14 @@ Once that's done, we can set up Plex\_Debrid
 
 Once here, follow the interactive shell to have a basic setup.
 
-## Editing settings.json
+## Editing <mark style="color:green;">settings.json</mark>
 
 Edit the settings according to your needs, mine looks for french movies in 1080p & 2160p.\
 I also use Prowlarr for additional trackers as `FRENCH 2160p` is still pretty scarce on public trackers.
+
+<details>
+
+<summary>settings.json example</summary>
 
 ```json
 {
@@ -414,6 +418,10 @@ I also use Prowlarr for additional trackers as `FRENCH 2160p` is still pretty sc
     ]
 }
 ```
+
+
+
+</details>
 
 ## Testing
 

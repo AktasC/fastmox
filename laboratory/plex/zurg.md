@@ -8,7 +8,7 @@ description: >-
 
 ## Clone & Extract
 
-[This section is currently obsolete](#user-content-fn-1)[^1]
+[This part is currently obsolete](#user-content-fn-1)[^1]
 
 ```bash
 mkdir /mnt/zurg /mnt/cache
@@ -79,21 +79,28 @@ directories:
       - regex: /.*/
 ```
 
+Feel free to test your regex [here](https://regexr.com/).\
+&#xNAN;_(don't forget to add the `/g` flag if you're testing multiple lines)_
+
 ## Edit <mark style="color:orange;">plex\_update.sh</mark>
 
-Two lines to update: Plex token and `zurg` mounting point.
+Two lines to update:
+
+* Plex token
+* Zurg mounting point.
 
 ## Testing
 
-Test everything manually to make sure it works properly:
+Test everything manually to make sure it works properly:\
+Simply run the binary and monitor the standard output for any errors.
 
-Simply run the binary and check the standard output for any errors.
-
-* `./zurg`
+```bash
+./zurg
+```
 
 ## Systemd Service
 
-Put this into `/etc/systemd/system/zurg.service`
+Paste this into `/etc/systemd/system/zurg.service`
 
 ```systemd
 [Unit]
@@ -115,6 +122,8 @@ StartLimitBurst=5
 WantedBy=multi-user.target
 ```
 
-Run `systemctl enable zurg`
+```bash
+sudo systemctl enable zurg
+```
 
 [^1]: Zurg's developer changed the repo's structure and how binaries are delivered.
