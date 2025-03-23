@@ -2,7 +2,13 @@
 description: The final part of the trifecta
 ---
 
-# Plex\_Debrid
+# Plex\_Debrid - Obsolete
+
+{% hint style="danger" %}
+This section is obsolete.
+
+Just use DebridMediaManager instead.
+{% endhint %}
 
 ## First Steps
 
@@ -15,6 +21,8 @@ Install pip.
 3. `rm get-pip.py`
 
 Once that's done, we can set up Plex\_Debrid
+
+
 
 1. `git clone https://github.com/itsToggle/plex_debrid`
 2. `cd plex_debrid/`

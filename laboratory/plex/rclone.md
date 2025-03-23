@@ -1,24 +1,32 @@
+---
+description: rClone is used to mount the Zurg webdav server locally running
+---
+
 # RClone
 
 ## First steps
 
-1. `cd /opt`
-2. `wget -q https://downloads.rclone.org/rclone-current-linux-amd64.zip`
-3. `unzip rclone-current-linux-amd64.zip`
-4. `mv rclone-v{x.yy.zz}-linux-amd64/rclone /opt/zurg-testing/`
-5. `cd zurg-testing; sudo chmod +x ./rclone`
+```bash
+cd /opt
+wget -q https://downloads.rclone.org/rclone-current-linux-amd64.zip
+unzip rclone-current-linux-amd64.zip
+mv rclone-*-linux-amd64/rclone /opt/zurg-testing/
+cd zurg-testing; sudo chmod +x ./rclone
+```
 
 ## Testing
 
 Test everything manually to make sure it works properly:
 
-* `./rclone mount zurg: /mnt/zurg --config=/opt/zurg-testing/rclone.conf --log-level=INFO --log-file=/opt/zurg-testing/zurg.log --allow-other --cache-dir=/mnt/cache/ --dir-cache-time=30s`
+```bash
+./rclone mount zurg: /mnt/zurg --config=/opt/zurg-testing/rclone.conf --log-level=INFO --log-file=/opt/zurg-testing/zurg.log --allow-other --cache-dir=/mnt/cache/ --dir-cache-time=30s
+```
 
 ## Rclone Service
 
 Put this into `/etc/systemd/system/rclone.service`
 
-```
+```systemd
 [Unit]
 Description=Rclone mount for zurg
 After=network-online.target
@@ -48,4 +56,6 @@ StartLimitBurst=3
 WantedBy=multi-user.target
 ```
 
-Run `systemctl enable rclone`
+```bash
+systemctl enable rclone
+```

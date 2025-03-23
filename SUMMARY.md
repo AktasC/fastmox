@@ -17,7 +17,7 @@
 * [🎥 Plex](laboratory/plex/README.md)
   * [Zurg](laboratory/plex/zurg.md)
   * [RClone](laboratory/plex/rclone.md)
-  * [Plex\_Debrid](laboratory/plex/plex_debrid.md)
+  * [Plex\_Debrid - Obsolete](laboratory/plex/plex_debrid-obsolete.md)
 * [🌌 Cosmos](laboratory/cosmos.md)
 * [☁️ SSL & CloudFlare](laboratory/ssl-and-cloudflare.md)
 * [🎮 AMP](laboratory/amp.md)
